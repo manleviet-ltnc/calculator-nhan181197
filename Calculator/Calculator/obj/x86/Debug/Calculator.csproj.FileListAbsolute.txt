@@ -5,3 +5,4 @@ C:\Users\Administrator.MRNC-GK1SVB1P2V\Documents\GitHub\calculator-nhan181197\Ca
 C:\Users\Administrator.MRNC-GK1SVB1P2V\Documents\GitHub\calculator-nhan181197\Calculator\Calculator\obj\x86\Debug\Calculator.csproj.GenerateResource.Cache
 C:\Users\Administrator.MRNC-GK1SVB1P2V\Documents\GitHub\calculator-nhan181197\Calculator\Calculator\obj\x86\Debug\Calculator.exe
 C:\Users\Administrator.MRNC-GK1SVB1P2V\Documents\GitHub\calculator-nhan181197\Calculator\Calculator\obj\x86\Debug\Calculator.pdb
+C:\Users\Administrator.MRNC-GK1SVB1P2V\Documents\GitHub\calculator-nhan181197\Calculator\Calculator\obj\x86\Debug\Calculator.csprojResolveAssemblyReference.cache
