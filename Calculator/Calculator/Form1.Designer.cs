@@ -238,6 +238,7 @@
             this.btnThapPhan.TabIndex = 19;
             this.btnThapPhan.Text = ".";
             this.btnThapPhan.UseVisualStyleBackColor = true;
+            this.btnThapPhan.Click += new System.EventHandler(this.btnThapPhan_Click);
             // 
             // btnPhanTram
             // 

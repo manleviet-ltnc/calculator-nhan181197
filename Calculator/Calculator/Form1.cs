@@ -18,7 +18,7 @@ namespace Calculator
 
         bool isTypingNumber = false;
 
-        enum PhepToan { Cong, Tru, Nhan, Chia };
+        enum PhepToan { none, Cong, Tru, Nhan, Chia };
         PhepToan pheptoan;
 
         double nho;
@@ -40,7 +40,8 @@ namespace Calculator
 
         private void NhapPhepToan(object sender, EventArgs e)
         {
-            TinhKetQua();
+            if (nho != 0)
+                TinhKetQua();
 
             Button btn = (Button)sender;
             switch (btn.Text)
@@ -54,7 +55,7 @@ namespace Calculator
             nho = double.Parse(lblDisplay.Text);
 
             isTypingNumber = false;
-        
+
         }
 
         private void TinhKetQua()
@@ -77,6 +78,8 @@ namespace Calculator
         {
             TinhKetQua();
             isTypingNumber = false;
+            nho = 0;
+            pheptoan = PhepToan.none;
         }
 
         private void frmMain_KeyPress(object sender, KeyPressEventArgs e)
@@ -115,7 +118,7 @@ namespace Calculator
             }
         }
 
-            private void btnCan_Click(object sender, EventArgs e)
+        private void btnCan_Click(object sender, EventArgs e)
         {
             lblDisplay.Text = (Math.Sqrt(Double.Parse(lblDisplay.Text))).ToString();
         }
@@ -141,6 +144,36 @@ namespace Calculator
             nho = 0;
             lblDisplay.Text = "0.";
         }
+
+        private void btnThapPhan_Click(object sender, EventArgs e)
+        {
+            if (lblDisplay.Text.Contains("."))
+            {
+                if (lblDisplay.Text == "0.")
+                {
+                    lblDisplay.Text = "";
+                    NhapSo("0.");
+                }
+                return;
+            }
+            lblDisplay.Text = lblDisplay.Text + ".";
+        }
+
+        private void NhapSo(string so)
+        {
+            if (isTypingNumber)
+            {
+                if (lblDisplay.Text == "0")
+                    lblDisplay.Text = "";
+                lblDisplay.Text = lblDisplay.Text + so;
+            }
+            else
+            {
+                lblDisplay.Text = so;
+                isTypingNumber = true;
+            }
+        }
+
     }
 }
 
